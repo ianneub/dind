@@ -87,7 +87,7 @@ popd >/dev/null
 rm -rf /var/run/docker.pid
 
 # Start docker in the background
-exec docker -d -H unix:///var/run/docker.sock $DOCKER_DAEMON_ARGS &
+exec docker -d -H unix:///var/run/docker.sock $DOCKER_DAEMON_ARGS &>/var/log/docker.log &
 
 # Give docker a chance to start up
 sleep 5
