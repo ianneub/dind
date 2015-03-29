@@ -7,7 +7,8 @@ RUN apt-get update -qq && apt-get install -qqy \
     ca-certificates \
     curl \
     lxc \
-    iptables
+    iptables \
+    make
     
 # Install Docker from Docker Inc. repositories.
 RUN curl -sSL https://get.docker.com/ubuntu/ | sh
