@@ -81,6 +81,9 @@ do
 done
 popd >/dev/null
 
+if [ "$DOCKERCFG" ]; then
+    printf "$DOCKERCFG" > ~/.dockercfg
+fi
 
 # If a pidfile is still around (for example after a container restart),
 # delete it so that docker can start.
