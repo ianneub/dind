@@ -93,4 +93,4 @@ rm -rf /var/run/docker.pid
 exec docker -d -H unix:///var/run/docker.sock $DOCKER_DAEMON_ARGS &>/var/log/docker.log &
 
 # Give docker a chance to start up
-sleep 5
+sleep 10
